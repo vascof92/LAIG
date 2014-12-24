@@ -2,8 +2,8 @@
 
 
 #include "CGFapplication.h"
-#include "Scene.h"
-#include "Interface.h"
+#include "ChessScene.h"
+#include "ChessInterface.h"
 #include <iostream>
 #include <exception>
 using std::cin;
@@ -11,27 +11,24 @@ using std::cout;
 using std::exception;
 
 int main(int argc, char* argv[]) {
+
 	CGFapplication app = CGFapplication();
 
-	try
-	{
+	try {
 		app.init(&argc, argv);
+		ChessScene* chess = new ChessScene();
+		app.setScene(chess);
+		app.setInterface(new ChessInterface(chess));
 		
-		try {
-			app.setScene(new Scene());
-			app.setInterface(new Interface());
-			app.run();
-		}
-		catch (GLexception& ex) {
-			throw "Error: " + *ex.what();
-		}
-		catch (exception& ex) {
-			throw "Unexpected error: " + *ex.what();
-		}
+		app.run();
 	}
-	catch (const char* msg) { //parse exception
-		cout << "EXCEPTION: " << msg;
-		exit(1);
+	catch(GLexception& ex) {
+		cout << "Erro: " << ex.what();
+		return -1;
+	}
+	catch(exception& ex) {
+		cout << "Erro inesperado: " << ex.what();
+		return -1;
 	}
 
 	return 0;

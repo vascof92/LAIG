@@ -7,7 +7,6 @@ Piece::Piece()
 	player = 0;
 
 }
-
 Piece::Piece(string t, int p){
 	type = t;
 	player = p;
@@ -39,6 +38,7 @@ void Piece::draw(){
 	if(player!=0){
 		glPushMatrix();
 		color->apply();
+		
 		glTranslatef(-0.5,0,0.5);
 		glRotatef(-90,1,0,0);
 
@@ -56,6 +56,24 @@ void Piece::draw(){
 		gluDeleteQuadric(cilindro);
 		glPopMatrix();
 		glPopMatrix();
+	}
+	else{
+		
+		glPushMatrix();
+		glTranslatef(-1,0.1,0);
+		glBegin(GL_QUADS);
+		glTexCoord2d(0,0);
+		glVertex3d(0,0,0);
+		glTexCoord2d(1,0);
+		glVertex3d(1,0,0);
+		glTexCoord2d(1,1);
+		glVertex3d(1,0,1);
+		glTexCoord2d(0,1);
+		glVertex3d(0,0,1);
+		
+
+	glEnd();
+	glPopMatrix();
 	}
 
 }

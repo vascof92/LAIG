@@ -14,6 +14,7 @@ public:
 	int getPlayer();
 	void setType(string t);
 	void setPlayer(int p);
+
 private:
 
 	int player;

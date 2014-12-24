@@ -12,16 +12,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Board.cpp" />
-    <ClCompile Include="src\Interface.cpp" />
+    <ClCompile Include="src\ChessInterface.cpp" />
+    <ClCompile Include="src\ChessScene.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Piece.cpp" />
-    <ClCompile Include="src\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Board.h" />
-    <ClInclude Include="include\Interface.h" />
+    <ClInclude Include="include\ChessInterface.h" />
+    <ClInclude Include="include\ChessScene.h" />
     <ClInclude Include="include\Piece.h" />
-    <ClInclude Include="include\Scene.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3A4F1E3F-8862-4892-A1EA-E3EE90BE15AB}</ProjectGuid>
