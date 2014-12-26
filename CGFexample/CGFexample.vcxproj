@@ -11,17 +11,45 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Bishop.cpp" />
     <ClCompile Include="src\Board.cpp" />
+    <ClCompile Include="src\Chair.cpp" />
+    <ClCompile Include="src\Chair1.cpp" />
+    <ClCompile Include="src\Chair2.cpp" />
+    <ClCompile Include="src\Chair3.cpp" />
     <ClCompile Include="src\ChessInterface.cpp" />
     <ClCompile Include="src\ChessScene.cpp" />
+    <ClCompile Include="src\Knight.cpp" />
+    <ClCompile Include="src\King.cpp" />
+    <ClCompile Include="src\LinearAnimation.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Pawn.cpp" />
     <ClCompile Include="src\Piece.cpp" />
+    <ClCompile Include="src\Queen.cpp" />
+    <ClCompile Include="src\Rectangle.cpp" />
+    <ClCompile Include="src\Rook.cpp" />
+    <ClCompile Include="src\Table.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Animation.h" />
+    <ClInclude Include="include\Bishop.h" />
     <ClInclude Include="include\Board.h" />
+    <ClInclude Include="include\Chair.h" />
+    <ClInclude Include="include\Chair1.h" />
+    <ClInclude Include="include\Chair2.h" />
+    <ClInclude Include="include\Chair3.h" />
     <ClInclude Include="include\ChessInterface.h" />
     <ClInclude Include="include\ChessScene.h" />
+    <ClInclude Include="include\Knight.h" />
+    <ClInclude Include="include\King.h" />
+    <ClInclude Include="include\LinearAnimation.h" />
+    <ClInclude Include="include\Pawn.h" />
     <ClInclude Include="include\Piece.h" />
+    <ClInclude Include="include\Queen.h" />
+    <ClInclude Include="include\Rectangle.h" />
+    <ClInclude Include="include\Rook.h" />
+    <ClInclude Include="include\Table.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3A4F1E3F-8862-4892-A1EA-E3EE90BE15AB}</ProjectGuid>
@@ -33,6 +61,7 @@
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -53,8 +82,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>bin\</OutDir>
-    <LibraryPath>lib;$(ProgramFiles)\Windows Kits\8.0\lib\win8\um\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
-    <IncludePath>include\CGF;include;$(ProgramFiles)\Windows Kits\8.0\Include\um;$(ProgramFiles)\Windows Kits\8.0\Include\shared;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>C:\Users\Oops\Downloads\LAIG 2 FINAL\CGFexample\assimp\lib;lib;$(ProgramFiles)\Windows Kits\8.0\lib\win8\um\x86;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+    <IncludePath>include\CGF;include;$(ProgramFiles)\Windows Kits\8.0\Include\um;$(ProgramFiles)\Windows Kits\8.0\Include\shared;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;C:\Users\Oops\Downloads\LAIG 2 FINAL\CGFexample\assimp\include</IncludePath>
     <IntDir>..\buildtemp\$(ProjectName)\</IntDir>
     <ExecutablePath>$(VCInstallDir)bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(VSInstallDir);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);$(ProgramFiles)\Windows Kits\8.0\bin\x86;</ExecutablePath>
     <ExcludePath>$(ProgramFiles)\Windows Kits\8.0\Include\um;$(ProgramFiles)\Windows Kits\8.0\Include\shared;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSDK_IncludePath);$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>

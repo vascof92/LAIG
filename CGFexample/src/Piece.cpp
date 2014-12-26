@@ -1,12 +1,85 @@
 #include "Piece.h"
 using namespace std;
 
+Piece::Piece(int x, int y)
+{
+	this->x=x;
+	this->y = y;
+	type = "";
+	player = 0;
+	anim = NULL;
+
+}
+
+void Piece::init(){}
+
+
+int Piece::getPos(int pos){
+	switch (pos)
+	{
+	default:
+		break;
+	case 1 :
+		return 0;
+	case 2:
+		return 2;
+	case 3:
+		return 4;
+	case 4:
+		return 6;
+	case 5:
+		return 8;
+	case 6:
+		return 10;
+	case 7:
+		return 12;
+	case 8:
+		return 14;
+	}
+
+	
+}
+
+void Piece::setPos(int xn,int yn){
+	
+	x=xn;
+	y=yn;
+}
+
+void Piece::draw(){
+
+	xpos = getPos(x);
+	ypos = getPos(y);
+
+	
+	glPushMatrix();
+
+		glTranslatef(xpos,0.1,ypos);
+		glBegin(GL_QUADS);
+		glTexCoord2d(0,0);
+		glVertex3d(0,0,0);
+		glTexCoord2d(1,0);
+		glVertex3d(2,0,0);
+		glTexCoord2d(1,1);
+		glVertex3d(2,0,2);
+		glTexCoord2d(0,1);
+		glVertex3d(0,0,2);
+		
+
+	glEnd();
+	glPopMatrix();
+
+}
+
+
+/*
 Piece::Piece()
 {
 	type = "";
 	player = 0;
 
 }
+
 Piece::Piece(string t, int p){
 	type = t;
 	player = p;
@@ -38,7 +111,6 @@ void Piece::draw(){
 	if(player!=0){
 		glPushMatrix();
 		color->apply();
-		
 		glTranslatef(-0.5,0,0.5);
 		glRotatef(-90,1,0,0);
 
@@ -56,24 +128,6 @@ void Piece::draw(){
 		gluDeleteQuadric(cilindro);
 		glPopMatrix();
 		glPopMatrix();
-	}
-	else{
-		
-		glPushMatrix();
-		glTranslatef(-1,0.1,0);
-		glBegin(GL_QUADS);
-		glTexCoord2d(0,0);
-		glVertex3d(0,0,0);
-		glTexCoord2d(1,0);
-		glVertex3d(1,0,0);
-		glTexCoord2d(1,1);
-		glVertex3d(1,0,1);
-		glTexCoord2d(0,1);
-		glVertex3d(0,0,1);
-		
-
-	glEnd();
-	glPopMatrix();
 	}
 
 }
@@ -96,3 +150,4 @@ void Piece::setPlayer(int p){
 	player = p;
 
 }
+*/

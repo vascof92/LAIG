@@ -3,6 +3,10 @@
 
 void Board::draw() 
 {
+	glDisable(GL_CULL_FACE);
+	glPushMatrix();
+	glScalef(2,0,2);
+	
 
 	glBegin(GL_QUADS);
 		glTexCoord2d(0,0);
@@ -15,4 +19,7 @@ void Board::draw()
 		glVertex3d(8,0,0);
 
 	glEnd();
+
+	glPopMatrix();
+	glEnable(GL_CULL_FACE);
 }

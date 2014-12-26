@@ -2,6 +2,7 @@
 
 #include "CGFinterface.h"
 #include "ChessScene.h"
+#include <map>
 
 using namespace std;
 class ChessInterface : public CGFinterface
